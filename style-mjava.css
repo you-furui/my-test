@@ -1,0 +1,97 @@
+h1 {
+  margin-top: 10px;
+  border-style: solid;
+  border-width: 1px 10px 1px 10px;
+  border-color: #55bb55;
+  padding: 9px 5px 9px 5px;
+  color: #226622;
+  background-color: #ccffcc;
+  background: linear-gradient(to right, #ffffff 50%, #55bb55 80%);
+}
+
+h2 {
+  border-style: solid;
+  border-width: 1px 4px 4px 1px;
+  border-color: #88cc88;
+  padding: 5px;
+  color: #448844;
+  background-color: #eeffee;
+  background: linear-gradient(to right, #ffffff 50%, #88cc88 80%);
+}
+
+h3 {
+  border-style: solid;
+  border-width: 1px 3px 3px 1px;
+  border-color: #cccccc;
+  padding: 3px;
+  color: #444444;
+  background-color: #cccccc;
+  background: linear-gradient(to right, #ffffff 50%, #cccccc 100%);
+}
+
+h4 {
+  padding: 0;
+  color: #444444;
+}
+
+h5 {
+  padding: 0;
+  color: #666666;
+}
+
+h6 {
+  padding: 0;
+  color: #888888;
+}
+
+table.mainTable {
+  width: 98%;
+}
+
+table.mainTable th {
+  background-color: #ccffcc;
+}
+
+table.mainTable tr:nth-child(odd) {
+  background-color: #eeffff;
+}
+
+table.mainTable tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+table.mainTable tr:hover,
+table.mainTable tr:hover th,
+table.mainTable tr:hover td {
+  background-color: #ffaaff;
+}
+
+/*---------- 配置 ----------*/
+
+body {
+  margin: 0 auto;
+  width: 97%;
+  max-width: 780px;
+  background-color: #ffffff;
+}
+
+main {
+  margin-bottom: 3.0rem;
+}
+
+footer#common-footer {
+  position: fixed;
+  bottom: 0;
+  width: 97%;
+  max-width: 780px;
+  height: 2.0rem;
+  line-height: 2.0rem;
+  text-align: center;
+  background-color: #ccffcc;
+}
+
+footer#common-footer * {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}

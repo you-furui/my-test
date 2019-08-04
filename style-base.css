@@ -1,0 +1,213 @@
+/*---------- 全般 ----------*/
+
+/* ルート要素 */
+html {
+  font-size: 10pt;
+  line-height: 1.5em;
+  color: #000000;
+}
+
+/*---------- 文章 ----------*/
+
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #993399;
+}
+
+a:hover {
+  color: #ff00ff;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+/* セクション */
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.5em 0 0.5em 0;
+  padding: 0;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.50rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.0rem;
+}
+
+h5 {
+  font-size: 1.0rem;
+}
+
+h6 {
+  font-size: 1.0rem;
+}
+
+address {
+  margin: 0.5em 0;
+  padding: 0;
+  font-style: italic;
+}
+
+/* グループ */
+p {
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+ol, ul {
+  margin: 0.5em 0;
+  padding: 0 0 0 2.0em;
+}
+
+dl {
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+dl.compact-dl dt {
+  display: table-cell;
+  clear: left;
+  float: left;
+  margin-right: 0.5em;
+  font-weight: 600;
+}
+
+dl.compact-dl dd {
+  display: table-cell;
+}
+
+blockquote {
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #ddddff;
+}
+
+figure {
+  margin: 0.5em 0;
+  padding: 0;
+  text-align: center;
+}
+
+hr {
+  margin-top: 0.5em;
+  margin-bottom: 0.4em;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: #999999;
+  padding: 0;
+}
+
+pre {
+  margin: 0.5em;
+  padding: 0.5em;
+  font-family: monospace;
+  background-color: #ddffff;
+}
+
+/* 画像 */
+img {
+  vertical-align: middle;
+}
+
+img.fluid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 95%;
+  height: auto;
+  box-shadow: 0 0 5px #222222;
+}
+
+/* テーブル */
+table.mainTable,
+table.subTable {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000000;
+  border-spacing: 2px;
+  background-color: #ffffff;
+}
+
+table.mainTable {
+  width: 98%;
+}
+
+table.subTable {
+  width: 98%;
+  max-width: 500px;
+  /* width: 500px; max-width: 95%; にするとChromeが縮小表示してくれない */
+}
+
+table.mainTable th, 
+table.subTable th {
+  margin: 2px;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-color: #000000;
+  padding: 1px;
+  text-align: center;
+  background-color: #eeeeee;
+}
+
+table.mainTable th.colHead, 
+table.subTable th.colHead {
+  width: 7.0rem;
+  vertical-align: top;
+}
+
+table.mainTable th.rowHead, 
+table.subTable th.rowHead {
+  white-space: nowrap;
+}
+
+table.mainTable td,
+table.subTable td {
+  margin: 2px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding: 1px;
+}
+
+table.mainTable tr:hover,
+table.mainTable tr:hover th,
+table.mainTable tr:hover td,
+table.subTable tr:hover,
+table.subTable tr:hover th,
+table.subTable tr:hover td {
+  background-color: #ffffdd;
+}
+
+/*---------- 配置 ----------*/
+
+body {
+  margin: 0 auto;
+}
+
+main {
+  display: block; /* for IE */
+}
