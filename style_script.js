@@ -7,7 +7,7 @@ var docEnv = new Array();
 docEnv['page.style'] = [ 'style-base.css', 'style-mjava.css' ];
 
 /* アイコン */
-docEnv['page.icon'] = 'https://mihiraki.github.io/java/mjava.ico';
+docEnv['page.icon'] = 'https://you-furui.github.io/my-test/mjava.ico';
 
 /* フッターに表示するリンク */
 docEnv['footer.links'] = {
