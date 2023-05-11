@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="robots" content="noindex,nofollow">
+    <script type="text/javascript" src="style_script.js"></script>
+    <title>JDK 17以前 - 「見ひらきで学べるJavaプログラミング」サポート</title>
+  </head>
+  <body>
+    <header id="common-header"></header>
+    <nav id="common-nav"></nav>
+    <main role="main">
+      <article>
+        <h2>開発環境としてWindowsとJDK 17以前を使用する</h2>
+        <p>Windowsで<a href="https://jdk.java.net/java-se-ri/17" target="_blank">Java Development Kit (JDK) 17以前</a>を使用する方法について説明します。
+        Step-2としては<strong>Step-2.(a)とStep-2.(b)のいずれか</strong>を選んで行ってください。
+        両方を行う必要はありません。
+        個人所有のPCを使用するほとんどの場合には(b)より(a)のほうがよいでしょう。</p>
+        <p>32ビット版Windowsで<a href="https://jdk.java.net/java-se-ri/8-MR4" target="_blank">JDK 8 i586版</a>を使用する場合にも本ページを参考にしてください。</p>
+        <p>なお、本ページの手順は次の各バージョンでテスト済みです。</p>
+        <ul>
+          <li>Windows 10 Home (64 bit) +
+          <span style="white-space: nowrap;">JDK 17</span>,
+          <span style="white-space: nowrap;">JDK 16</span>,
+          <span style="white-space: nowrap;">JDK 15</span>,
+          <span style="white-space: nowrap;">JDK 14</span>,
+          <span style="white-space: nowrap;">JDK 13</span>,
+          <span style="white-space: nowrap;">JDK 12</span>
+          <li>Windows 7 Home Premium (32 bit) +
+          <span style="white-space: nowrap;">JDK 8 i586</span><br>
+          <small>※Win 10の32ビット版が手元に無かったので、たまたま残っていたWin 7を使用しました。</small>
+        </ul>
+        <h3>Step-1. 便利なテキストエディタのインストール</h3>
+        <p>ここではテキストエディタとしてTeraPadを採用する場合の手順を説明します。
+        TeraPadは定評あるフリーのテキストエディタです。</p>
+        <ul>
+          <li><a href="https://tera-net.com/" target="_blank">TeraPad</a>のインストール (<a href="terapad_install.pptx">PowerPoint版</a>, <a href="terapad_install.pdf">PDF版</a>)
+        </ul>
+        <p>なお、Windowsで使用できる他のフリーのテキストエディタは<a href="https://www.vector.co.jp/" target="_blank">Vector</a>、<a href="https://forest.watch.impress.co.jp/" target="_blank">窓の杜</a>等から入手できます。</p>
+        <div class="decorated-box"><b>※注意※</b><br>
+        TeraPadなどのテキストエディタをインストールすることができない場合には、Windowsに付属する「メモ帳」を使用することができます。
+        「メモ帳」の使用にあたっては次の点に留意してください。
+        <ul>
+          <li>作成したJavaソースファイルを保存するときの保存先を間違えないようにすること。
+          <li>Javaソースファイルの文字コードをシフトJIS（メモ帳での表示は「ANSI」）にすること。
+          後述Step-3も参照。
+        </ul></div>
+        <h3>Step-2.(a) JDKのインストールと操作（Cドライブ直下に書き込む場合）</h3>
+        <p>この手順は途中までは本書2.5節に記載されているものと同じです。</p>
+        <ul>
+          <li><a href="https://jdk.java.net/java-se-ri/17" target="_blank">JDK</a>のインストールと操作 (<a href="jdk_cdrive_jdk12.pptx">PowerPoint版</a>, <a href="jdk_cdrive_jdk12.pdf">PDF版</a>)
+        </ul>
+        <p>本書2.5節との違いは次のとおりです。</p>
+        <ul>
+          <li>2.5節と同じ: PCのCドライブ直下のルートフォルダ(C:\)にJDKをインストールします。
+          <li>2.5節と<b>違う</b>: テキストエディタとしてTeraPadを使用します。
+          <li>2.5節と<b>違う</b>: 作業用フォルダを「デスクトップ」に置いてアクセスしやすくします。
+          <li>2.5節と<b>違う</b>: コマンドプロンプトの起動をより簡単にします。
+        </ul>
+        <p>なお、Cドライブ直下にJDKを置くことには次のような利点があります。</p>
+        <ul>
+          <li>JDKのありかを見つけやすく、他のアプリからJDKを利用するときに設定しやすい。
+          <li>設定を統一できる。教員にとっては授業等で使用者（受講者）が大勢いるときに指導しやすい。
+          <li>同一PCを複数の使用者が共有するとき、インストール作業をそれぞれの使用者がやらなくても1回で済む。
+        </ul>
+        <h3>Step-2.(b) JDKのインストールと操作（Cドライブ直下に書き込めない場合）</h3>
+        <p>この手順はユーザの個人領域である「デスクトップ」にJDKをインストールするためのものです。
+        Cドライブ直下へのインストールが許可されていない場合でも、この手順は実行可能です。</p>
+        <ul>
+          <li>ユーザ個人領域への<a href="https://jdk.java.net/java-se-ri/17" target="_blank">JDK</a>のインストールと操作 (<a href="jdk_desktop_jdk12.pptx">PowerPoint版</a>, <a href="jdk_desktop_jdk12.pdf">PDF版</a>)
+        </ul>
+        <div class="decorated-box"><b>※注意1※</b><br>
+        TeraPadのインストール（上のStep-1）をも行えない場合を考慮し、この手順ではテキストエディタとしてWindows付属の「メモ帳」を使用するようにしていますが、実際には「メモ帳」以外のテキストエディタを使用しても構いません。</div>
+        <div class="decorated-box"><b>※注意2※</b><br>
+        「デスクトップ」がOneDriveと同期している場合、そこにJDKをインストールすると大きな同期処理が発生します。
+        これを避けるには、JDKのインストール先を「デスクトップ」(Desktop)から他の非同期のフォルダに、たとえば「ダウンロード」(Downloads)などに読み換えてください。
+        この説明の意味が解らない場合にはPCの管理者に確認してください。</div>
+        <h3>Step-3. 文字化けについて</h3>
+        <p>Windows付属の「メモ帳」の既定文字コードは2019年の更新によりシフトJISからUTF-8に変更されましたが、JDK 17までの既定文字コードはシフトJISですので、両者の組み合わせでは文字化けが発生しやすいです。
+        この現象と対処方法については<a href="encoding.html">文字化け</a>を参照してください。</p>
+        <p>詳細については<a href="errata.pdf">正誤表</a>の付録Aを参照してください。</p>
+      </article>
+    </main>
+    <footer id="common-footer"></footer>
+  </body>
+</html>

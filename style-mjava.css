@@ -1,3 +1,6 @@
+@charset 'utf-8';
+
+/* h1～h6の見出し ※h1は共通ヘッダのマストヘッドにも使われる */
 h1 {
   margin-top: 10px;
   border-style: solid;
@@ -30,20 +33,18 @@ h3 {
 }
 
 h4 {
-  padding: 0;
   color: #444444;
 }
 
 h5 {
-  padding: 0;
   color: #666666;
 }
 
 h6 {
-  padding: 0;
   color: #888888;
 }
 
+/* 表 */
 table.mainTable {
   width: 98%;
 }
@@ -68,22 +69,171 @@ table.mainTable tr:hover td {
 
 /*---------- 配置 ----------*/
 
+/* HTML文書の本体 */
 body {
   margin: 0 auto;
-  width: 97%;
-  max-width: 780px;
+  max-width: 620px;
   background-color: #ffffff;
 }
 
+/* メイン */
 main {
-  margin-bottom: 3.0rem;
+  max-width: 620px;
+  overflow: hidden;
+  background-color: #ccffcc;
 }
 
+/* 記事本体 */
+main > article {
+  padding-top: 10px;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  width: 97%;
+  background-color: #ffffff;
+  /* background-image: url(testback.png); */
+}
+
+main > article:last-child {
+  margin-bottom: 2.0rem; /* == #common-footer's height */
+}
+
+main > article *:first-child {
+  margin-top: 0;
+}
+
+main > article *:last-child {
+  margin-bottom: 0;
+}
+
+/* 記事本体の中に表示する囲み */
+main > article div.decorated-box {
+  display: block;
+  overflow: hidden;
+  margin-top: 10px;
+  border-width: 1px;
+  border-style: dashed;
+  border-color: #999999;
+  padding: 10px;
+}
+
+/* 共通ヘッダ */
+header#common-header {
+  padding-left: 10px;
+  height: 70px; /* masthead 50px + copyright 20px */
+  overflow: hidden;
+  background-color: #88cc88;
+}
+
+header#common-header * {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+header#common-header *#common-masthead {
+  height: 50px;
+  line-height: 50px;
+}
+
+header#common-header *#common-copyright {
+  height: 20px;
+  line-height: 20px;
+}
+
+/* 共通リンクメニュー */
+nav#common-nav {
+  padding-left: 10px;
+  /* overflow: hidden; */
+  background-color: #88cc88;
+}
+
+nav#common-nav * {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  line-height: 2.0rem;
+}
+
+nav#common-nav ul {
+  display: block;
+  /* overflow: hidden; */
+  list-style: none;
+}
+
+nav#common-nav ul li {
+  display: block;
+}
+
+nav#common-nav ul li.endmark {
+  width: 0;  /* 不可視、ただし display: none は用いない */
+  height: 0;
+}
+
+nav#common-nav ul.mainmenu > li {
+  float: left;
+}
+
+nav#common-nav ul.mainmenu > li.endmark {
+  float: none;
+  clear: left;
+}
+
+nav#common-nav ul li a {
+  display: block;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+  white-space: nowrap;
+  background-color: #88cc88;
+  background: linear-gradient(to bottom right, #88cc88 20%, #ccffcc 50%, #eeffee 100%);
+}
+
+nav#common-nav ul li a:hover {
+  background: none;
+  background-color: #ffffaa;
+}
+
+nav#common-nav ul li span#current-page {
+  display: block;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+  white-space: nowrap;
+  /* font-weight: 900; */
+  background-color: #ffffff;
+}
+
+nav#common-nav ul.submenu li span#current-page {
+  background-color: #eeeeee;
+}
+
+nav#common-nav ul.submenu {
+  display: none; /* 非可視化 */
+}
+
+nav#common-nav li:hover {
+  position: relative; /* 子要素の位置をposition: absoluteで指定 */
+}
+
+nav#common-nav li:hover > ul {
+  display: block; /* 可視化 */
+  position: absolute; /* 親要素の中での位置を指定 */
+  top: 24px;
+  left: 12px;
+  z-index: 1;
+}
+
+/* 共通フッタ */
 footer#common-footer {
   position: fixed;
   bottom: 0;
   width: 97%;
-  max-width: 780px;
+  max-width: 620px;
   height: 2.0rem;
   line-height: 2.0rem;
   text-align: center;
@@ -94,4 +244,72 @@ footer#common-footer * {
   margin: 0;
   border: 0;
   padding: 0;
+}
+
+/* 横幅が広い場合 */
+@media screen and (min-width: 800px){
+
+  body {
+    position: relative; /* 子要素の位置をposition: absoluteで指定 */
+    width: 780px;
+    max-width: 780px;
+  }
+
+  nav#common-nav {
+    position: absolute; /* 親要素の中での位置を指定 */
+    top: 70px; /* masthead 50px + copyright 20px */
+    width: 160px;
+    padding-top: 10px;
+    padding-left: 0;
+  }
+
+  nav#common-nav ul li a,
+  nav#common-nav ul li span#current-page {
+    width: 150px;
+  }
+
+  nav#common-nav ul.mainmenu > li {
+    float: none;
+  }
+
+  nav#common-nav ul.submenu {
+    display: block; /* 可視化 */
+  }
+
+  nav#common-nav ul.submenu li a,
+  nav#common-nav ul.submenu li span#current-page {
+    padding-left: 20px;
+    width: 135px;
+  }
+
+  nav#common-nav ul.submenu li span#current-page {
+    background-color: #ffffff;
+  }
+
+  nav#common-nav li:hover {
+    position: static;
+  }
+
+  nav#common-nav li:hover ul {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+
+  main {
+    width: 780px;
+    max-width: 780px;
+  }
+
+  main > article {
+    margin-left: 160px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 600px;
+  }
+
+  footer#common-footer {
+    max-width: 780px;
+  }
+
 }

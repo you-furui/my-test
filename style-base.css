@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 /*---------- 全般 ----------*/
 
 /* ルート要素 */
@@ -5,6 +7,13 @@ html {
   font-size: 10pt;
   line-height: 1.5em;
   color: #000000;
+}
+
+/* リセット */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 /*---------- 文章 ----------*/
@@ -30,6 +39,7 @@ a:active {
 
 /* セクション */
 h1, h2, h3, h4, h5, h6 {
+  clear: both;
   margin: 1.5em 0 0.5em 0;
   padding: 0;
   font-weight: 900;
@@ -81,16 +91,29 @@ dl {
   padding: 0;
 }
 
-dl.compact-dl dt {
-  display: table-cell;
+dl > dt {
+  margin-left: 0.5em;
+}
+
+dl > dd {
+  margin-left: 2.0em;
+}
+
+dl.strong-dt > dt {
+  font-weight: 600;
+}
+
+dl.compact-dl > dt {
   clear: left;
   float: left;
+  margin-left: 0.5em;
   margin-right: 0.5em;
   font-weight: 600;
 }
 
-dl.compact-dl dd {
-  display: table-cell;
+dl.compact-dl > dd {
+  /* display: table-cell; */
+  /* margin-left: 0; *//* table-cellではそもそもmargin-left無効 */
 }
 
 blockquote {
@@ -174,7 +197,6 @@ table.subTable th {
 
 table.mainTable th.colHead, 
 table.subTable th.colHead {
-  width: 7.0rem;
   vertical-align: top;
 }
 
@@ -211,3 +233,4 @@ body {
 main {
   display: block; /* for IE */
 }
+
